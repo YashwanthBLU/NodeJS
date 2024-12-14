@@ -18,3 +18,10 @@ eventEmitter.on("log", (message) => {
 });
 
 eventEmitter.emit("log", "This is a custom log message");
+
+eventEmitter.on("time", () => {
+  const time = new Date().toLocaleTimeString();
+  console.log(`Current Time: ${time}`);
+});
+
+eventEmitter.emit("time");
